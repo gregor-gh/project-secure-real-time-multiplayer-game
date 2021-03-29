@@ -5,7 +5,7 @@ class Collectible {
 
 }
 
-/*
+/* 
   Note: Attempt to export this for use
   in server.js
 */
