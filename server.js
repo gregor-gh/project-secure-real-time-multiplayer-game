@@ -62,8 +62,9 @@ server.listen(portNum, () => {
   }
 });
 
-const { createGameState } = require("./game");
+const { createGameState,gameLoop } = require("./game");
 const { FRAME_RATE } = require("./constants");
+
 
 io.on("connection", client => {
   const state = createGameState();
