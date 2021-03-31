@@ -10,7 +10,7 @@ const runner = require('./test-runner.js');
 
 const app = express();
 
-/*
+
 app.use(helmet.xssFilter());
 app.use(helmet.noSniff());
 app.use(helmet.noCache());
@@ -18,7 +18,7 @@ app.use((_req, res, next) => {
   res.setHeader("X-Powered-By", "PHP 7.4.3");
   next();
 });
-*/
+
 
 app.use('/public', express.static(process.cwd() + '/public'));
 app.use('/assets', express.static(process.cwd() + '/assets'));
