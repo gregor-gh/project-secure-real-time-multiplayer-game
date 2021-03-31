@@ -9,12 +9,6 @@ class Player {
     this.id = id;
   }
 
-  draw(context) {
-    context.beginPath();
-    context.arc(this.x, this.y, RADIUS, 0, Math.PI * 2, false);
-    context.fill();
-  }
-
   movePlayer(dir, speed) {
     switch (dir) {
       case "up":
