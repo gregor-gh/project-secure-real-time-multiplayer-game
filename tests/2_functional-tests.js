@@ -24,7 +24,7 @@ suite('Functional Tests', () => {
           assert.deepStrictEqual(res.header['x-content-type-options'], 'nosniff');
           done();
         });
-    });
+    }).timeout(10000);
 
     test("Prevent cross-site scripting (XSS) attacks.", done => {
       chai.request(server)
@@ -33,7 +33,7 @@ suite('Functional Tests', () => {
           assert.deepStrictEqual(res.header['x-xss-protection'], '1; mode=block');
           done();
         });
-    });
+    }).timeout(10000);
 
     test("Nothing from the website is cached in the client.", done => {
       chai.request(server)
@@ -45,7 +45,7 @@ suite('Functional Tests', () => {
           assert.deepStrictEqual(res.header['expires'], '0');
           done();
         });
-    });
+    }).timeout(10000);
 
     test("The headers say that the site is powered by 'PHP 7.4.3'.", done => {
       chai.request(server)
@@ -54,7 +54,7 @@ suite('Functional Tests', () => {
           assert.deepStrictEqual(res.header['x-powered-by'], 'PHP 7.4.3');
           done();
         });
-    });
+    }).timeout(10000);
   });
 
 });
